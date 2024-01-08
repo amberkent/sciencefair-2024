@@ -3,10 +3,10 @@ import time
 import Adafruit_ADS1x15
 PWMpin=0
 Pot_Pin=3
-GAIN=1
+GAIN=1/327.67
+
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(PWMpin,GPIO.OUT)
-
 p = GPIO.PWM (PWMpin,50) #Frequenzy 50 = 50 hertz
 
 value = adc.read_adc_difference(Pot_Pin, gain=GAIN)
