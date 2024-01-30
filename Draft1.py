@@ -5,11 +5,12 @@ PWMpin=0
 Pot_Pin=3
 GAIN=1/327.67
 
-while true:
- 
+adc = Adafruit_ADS1x15.ADS1115()
  GPIO.setmode(GPIO.BCM)
  GPIO.setup(PWMpin,GPIO.OUT)
  p = GPIO.PWM (PWMpin,50) #Frequenzy 50 = 50 hertz
+
+while true:
 
  value = adc.read_adc_difference(Pot_Pin, gain=GAIN)
  # the dutycycle for RPi.GPIO is 0-100:
@@ -17,4 +18,4 @@ while true:
  p.ChangeDutyCycle(dc) 
 
  # 0.05 = 0.05 seconds
- sleep.time(0.05)
+ time.sleep(0.05)
