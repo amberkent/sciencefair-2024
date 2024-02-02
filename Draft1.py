@@ -12,10 +12,11 @@ p = GPIO.PWM (PWMpin,50) #Frequenzy 50 = 50 hertz
 
 while true:
 
-    inputValue = GPIO.input(Pot_Pin*GAIN)
+    inputValue = GPIO.input(Pot_Pin)
     #value = adc.read_adc_difference(Pot_Pin, gain=GAIN)
     # the dutycycle for RPi.GPIO is 0-100:
     # See: https://raspberrypi.stackexchange.com/questions/114413/what-values-for-pwm-to-set-intensity-from-0-to-255#:~:text=0-,RPi.,and%2050%20is%20half%20power.
+    pot_pin_value=inputValue*GAIN
     p.ChangeDutyCycle(dc) 
 
  # 0.05 = 0.05 seconds
