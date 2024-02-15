@@ -20,5 +20,5 @@ while true:
     pot_pin_value=inputValue*GAIN
     p.ChangeDutyCycle(dc) 
 
- # 0.05 = 0.05 seconds
- time.sleep(0.05)
+# 0.05 = 0.05 seconds
+time.sleep(0.05)
