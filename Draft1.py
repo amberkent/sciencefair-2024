@@ -11,7 +11,7 @@ GPIO.setup(Pot_Pin, GPIO.IN)
 GPIO.setup(PWMpin,GPIO.OUT)
 p = GPIO.PWM (PWMpin,50) #Frequenzy 50 = 50 hertz
 
-while true:
+while True:
 
     inputValue = GPIO.input(Pot_Pin)
     #value = adc.read_adc_difference(Pot_Pin, gain=GAIN)
