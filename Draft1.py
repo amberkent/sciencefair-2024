@@ -9,7 +9,7 @@ GAIN=1/327.67
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(Pot_Pin, GPIO.IN)
 GPIO.setup(PWMpin,GPIO.OUT)
-p = GPIO.PWM (PWMpin,50) #Frequenzy 50 = 50 hertz
+p = GPIO.PWM (PWMpin,0.5) #Frequenzy 50 = 50 hertz
 
 while True:
     inputValue = GPIO.input(Pot_Pin)
