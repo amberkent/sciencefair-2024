@@ -1,14 +1,15 @@
 import RPi.GPIO as GPIO
 import time
-import Adafruit_ADS1x15
+import adafruit_ads1x15.ads1115 as ADS
+import adafruit_tsl2591
 import board
 import busio
-PWMpin=35
+from adafruit_ads1x15.analog_in import AnalogIn
+PWMpin=19
 #Pot_Pin=7
-GAIN=1/327.67
+GAIN=100/24300
 #GAIN=1
 
-adc = Adafruit_ADS1x15.ADS1115()
 GPIO.setmode(GPIO.BCM)
 #GPIO.setup(Pot_Pin, GPIO.IN)
 GPIO.setup(PWMpin,GPIO.OUT)
@@ -23,7 +24,7 @@ while True:
     #value = adc.read_adc_difference(Pot_Pin, gain=GAIN)
     # the dutycycle for RPi.GPIO is 0-100:
     # See: https://raspberrypi.stackexchange.com/questions/114413/what-values-for-pwm-to-set-intensity-from-0-to-255#:~:text=0-,RPi.,and%2050%20is%20half%20power.
-    dc=value*GAIN
+    dc= min(max(value*GAIN, 0), 100)
     print(f"Input: {value} {dc}")
     p.ChangeDutyCycle(dc)
 
