@@ -1,5 +1,4 @@
 RPi.GPIO
-time
 pyttsx3
 adafruit-circuitpython-seesaw
 PySimpleGUI
