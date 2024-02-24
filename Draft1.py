@@ -9,7 +9,7 @@ GAIN=1/327.67
 #GAIN=1
 
 adc = Adafruit_ADS1x15.ADS1115()
-GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM)
 #GPIO.setup(Pot_Pin, GPIO.IN)
 GPIO.setup(PWMpin,GPIO.OUT)
 p = GPIO.PWM (PWMpin,100) #Frequenzy 50 = 50 hertz
