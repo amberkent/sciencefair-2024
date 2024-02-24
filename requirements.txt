@@ -1,2 +1,8 @@
 RPi.GPIO
 time
+pyttsx3
+adafruit-circuitpython-seesaw
+PySimpleGUI
+adafruit-circuitpython-tsl2591
+adafruit-circuitpython-ads1x15
+Pillow
