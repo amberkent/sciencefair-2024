@@ -2,11 +2,11 @@ import RPi.GPIO as GPIO
 import time
 #import Adafruit_ADS1x15
 PWMpin=35
-Pot_Pin=3
+Pot_Pin=5
 GAIN=1/327.67
 
 #adc = Adafruit_ADS1x15.ADS1115()
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 GPIO.setup(Pot_Pin, GPIO.IN)
 GPIO.setup(PWMpin,GPIO.OUT)
 p = GPIO.PWM (PWMpin,0.5) #Frequenzy 50 = 50 hertz
