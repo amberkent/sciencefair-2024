@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 import time
-import Adafruit_ADS1x15
+import Adafruit_ADS1x15 as ADS
 import board
 import busio
 PWMpin=35
