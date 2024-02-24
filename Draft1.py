@@ -1,6 +1,8 @@
 import RPi.GPIO as GPIO
 import time
 import Adafruit_ADS1x15
+import board
+import busio
 PWMpin=35
 #Pot_Pin=7
 GAIN=1/327.67
