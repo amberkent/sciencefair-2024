@@ -5,6 +5,7 @@ PWMpin=35
 Pot_Pin=7
 GAIN=1/327.67
 gain=1
+
 adc = Adafruit_ADS1x15.ADS1115()
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(Pot_Pin, GPIO.IN)
