@@ -6,3 +6,4 @@ PySimpleGUI
 adafruit-circuitpython-tsl2591
 adafruit-circuitpython-ads1x15
 Pillow
+adafruit-blinka
