@@ -11,6 +11,11 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(Pot_Pin, GPIO.IN)
 GPIO.setup(PWMpin,GPIO.OUT)
 p = GPIO.PWM (PWMpin,100) #Frequenzy 50 = 50 hertz
+i2c = board.I2C()  
+i2c = busio.I2C(board.SCL, board.SDA)
+ads = ADS.ADS1115(i2c)
+SDA = AnalogIn(ads, ADS.P0)
+SCL = AnalogIn(ads, ADS.P2)
 
 while True:
     value = adc.read_adc_difference(Pot_Pin, gain=GAIN)
