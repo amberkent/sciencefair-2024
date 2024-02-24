@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import time
 #import Adafruit_ADS1x15
 PWMpin=35
-Pot_Pin=9
+Pot_Pin=3
 GAIN=1/327.67
 
 #adc = Adafruit_ADS1x15.ADS1115()
